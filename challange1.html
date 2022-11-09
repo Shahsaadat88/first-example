@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function greetMe() {
+                const nameInput = document.getElementById("name");
+                //const nameInput = document.querySelector("#name");
+                const resultsDiv = document.getElementById("results");
+                const yearInput = document.getElementById("year");
+                const currentYear = new Date().getFullYear();
+                console.log(currentYear);
+                const age = currentYear - yearInput.value;
+                resultsDiv.innerHTML = `Hello ${nameInput.value}, you are probably ${age}`;
+                const pizza ={
+                    base : "thin",
+                    toppings :["olives", "Ham"]
+                }
+                pizza,size='12"';
+                console.log(pizza);
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Javascript challenge 1</h1>
+        <p>
+            <label for="name">Name</label>
+            <input id="name" type="text">
+        </p>
+        <p>
+            <label for="year">Year of birth</label>
+            <input id="year" type="number">
+        </p>
+        <p><button onclick="greetMe()">Greet me</button></p>
+        <div id="results"></div>
+    </body>
+</html>
