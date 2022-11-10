@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link href="styles.css" rel="stylesheet" type = "test/css">
         <title>Customer form</title>
+        <script>
+            function hideAway (){
+            const x = document.getElementById("list");
+            if (x.style.display === "none"){
+                x.style.display = "block";
+                document.getElementById("head2").innerText = "^Instructions"
+            }else{
+                x.style.display ="none";
+                document.getElementById("head2").innerText = ">Instruction";
+            }
+
+        </script>
     </head>
     <body>
         <h1>Customer form</h1>
-        <h2>Instructions</h2>
-        <ul>
+        <h2 id="head2" class="mini-heading" onclick="hideList()">^Instructions</h4>
+        <ul id = "list">
             <li>Complete the fields</li>
             <li>Press the send button</li>
+            <li>It will cost &pound;50</li>
         </ul>
 
         <h2>Customer information</h2>
